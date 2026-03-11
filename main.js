@@ -80,3 +80,62 @@ function delayMessage(message, delayMs, callback) {
 delayMessage("Привет через 2 секуннды", 2000, ()  => {
     console.log("Callback выполнен")
 })
+
+// const pattern = 'hello';
+// const regex = new RegeExp(pattern);
+// console.log(regex);
+// const text = 'hello word';
+// // str.match(regex);
+
+// console.log(text.match(regex))
+
+// console.log(regex.test('hello world'));
+
+// /\d/  digit(0-9)
+// /\D/   НЕ цифра
+// /\w/ любая латинская цифра или знак подчеркиваний
+// /\W/ всё что не входит в /W
+// /\s/ пробелы табуляция и перевод строки
+// /\S/ любой не пробелный символ
+// /\./ любой символ кроме переноса строки
+
+// const phone = '123-456'
+// console.log(/\d\d\d-\d\d\d/.test(phone));
+
+// /\d{n}/ продублировать ровно n раз
+// /\d{n, m}/  продублировать от n до m раз /\(3, 5)/
+
+// /\d{n,}/ n и более раз
+
+// console.log(/colou?r/.trst('color'))
+// console.log(/colou?r/.trst('colour'))
+
+// Якоря - ищут позицию в строке
+// ^ - начало строки
+// $ - конец строки
+
+// const regex = /^\d{5}$/;
+// console.log(regex.test('12334'));
+// console.log(regex.test('12334555'));
+// console.log(regex.test('1asdasd'));
+
+
+// Наборы и диапазоны
+
+// [abc] - либо a либо b  либо c
+// [a-z] - любая строчная внутри данного диапазона
+// [0-9] - аналог \d
+// [а-яё] - любая русская буква
+// [^abc] - любой символ кроме введённых поле ^
+
+// console.log(/^[A-Z]/.test('Hello'));
+// console.log(/hello/i.test('Hello'));
+
+// console.log([1,2,3,4].match(/\d/g)); g - ищет все совподение
+
+function validateEmail(email) {
+    const regex = /^[\w.-]+@[a-z-]+\.\[a-z]{2,6}$/
+    return regex.test(email);
+
+}
+console.log(validateEmail('aghunik.sahakyan@mail.ru'));
