@@ -69,18 +69,17 @@ function filterStrings(arr, minLength) {
 console.log(filterStrings(["кошка", "собака", "корова"], 2));
 
 function delayMessage(message, delayMs, callback) {
-    setTimeout(() => {
-        console.log(message);
-
-        if (typeof callback === 'function') {
-            callback();
-        }
-    }, delayMs)
+  setTimeout(() => {
+    console.log(message);
+    if (typeof callback === 'function') { 
+      callback();
+    }
+  }, delayMs);
 }
-delayMessage("Привет через 2 секуннды", 2000, ()  => {
-    console.log("Callback выполнен")
-})
 
+delayMessage("Привет через 2 секунды", 2000, () => {
+  console.log("Callback выполнен");
+});
 // const pattern = 'hello';
 // const regex = new RegeExp(pattern);
 // console.log(regex);
@@ -133,9 +132,9 @@ delayMessage("Привет через 2 секуннды", 2000, ()  => {
 
 // console.log([1,2,3,4].match(/\d/g)); g - ищет все совподение
 
-function validateEmail(email) {
-    const regex = /^[\w.-]+@[a-z-]+\.\[a-z]{2,6}$/
-    return regex.test(email);
+// function validateEmail(email) {
+//     const regex = /^[\w.-]+@[a-z-]+\.\[a-z]{2,6}$/
+//     return regex.test(email);
 
-}
-console.log(validateEmail('aghunik.sahakyan@mail.ru'));
+// }
+// console.log(validateEmail('aghunik.sahakyan@mail.ru'));
